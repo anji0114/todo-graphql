@@ -1,0 +1,16 @@
+import { gql } from "apollo-server-express";
+
+export const typeDefs = gql`
+  type Todo {
+    id: ID!
+    title: String!
+    completed: Boolean!
+    created_at: String!
+    updated_at: String!
+  }
+
+  type Query {
+    todos: [Todo!]!
+    todo(id: ID!): Todo
+  }
+`;
