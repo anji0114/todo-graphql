@@ -13,4 +13,8 @@ export const typeDefs = gql`
     todos: [Todo!]!
     todo(id: ID!): Todo
   }
+
+  type Mutation {
+    toggleTodo(id: ID!): Todo!
+  }
 `;
